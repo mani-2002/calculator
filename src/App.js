@@ -53,12 +53,26 @@ const App = () => {
             <div
               style={{
                 color: "gray",
-                fontSize: "1.5em",
+                fontSize: "3vh",
               }}
             >
               small screen
             </div>
-            <div style={{ fontSize: "2.5em" }}>output screen</div>
+            <div style={{ fontSize: "5vh" }}>
+              <input
+                type="text"
+                style={{
+                  backgroundColor: "black",
+                  color: "white",
+                  border: "none",
+                  width: "40vh",
+                  textAlign: "right",
+                  outline: "none",
+                  fontSize: "5vh",
+                }}
+                placeholder="0"
+              />
+            </div>
           </div>
           <div
             style={{
