@@ -1,25 +1,340 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+          flexDirection: "column",
+          backgroundColor: "whitesmoke",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            margin: "2vh",
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          <div style={{ fontSize: "5vh", fontFamily: "Georgia" }}>
+            Calculator
+          </div>
+          <p style={{ fontFamily: "Georgia" }}>
+            Math problems? No problem. That’s what calculators are for!
+          </p>
+        </div>
+        <div
+          style={{
+            boxShadow:
+              "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+            borderRadius: "20px 20px",
+          }}
+        >
+          <div
+            style={{
+              borderBottom: "1px solid black",
+              backgroundColor: "black",
+              color: "white",
+              alignItems: "center",
+              justifyContent: "center",
+              display: "flex",
+              padding: "5vh 10vh",
+              borderRadius: "20px 20px 0 0",
+            }}
+          >
+            screen
+          </div>
+          <div
+            style={{
+              padding: "5vh 10vh",
+              height: "40vh",
+              width: "30vh",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(4, 1fr)",
+                gridTemplateRows: "repeat(5, 1fr)",
+                columnGap: "28px",
+                rowGap: "20px",
+              }}
+            >
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>C</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>+/-</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>%</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>/</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>1</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>2</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>3</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>X</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>4</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>5</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>6</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>-</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>7</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>8</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>9</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>+</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>00</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>0</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>.</b>
+              </button>
+              <button
+                style={{
+                  textAlign: "center",
+                  padding: "2vh",
+                  boxShadow:
+                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
+                  borderRadius: "1vh",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+              >
+                <b>=</b>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
