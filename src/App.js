@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import "./App.css";
 
 const App = () => {
+  const [value, setValue] = useState("");
+  if (value.length > 8) {
+    alert("input length should be less than 8");
+    setValue("");
+  }
   return (
     <div>
       <div
@@ -45,19 +51,11 @@ const App = () => {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "flex-end",
-              padding: "20px",
+              padding: "16px",
               borderRadius: "20px 20px 0 0",
               margin: "auto",
             }}
           >
-            <div
-              style={{
-                color: "gray",
-                fontSize: "3vh",
-              }}
-            >
-              small screen
-            </div>
             <div style={{ fontSize: "5vh" }}>
               <input
                 type="text"
@@ -68,291 +66,124 @@ const App = () => {
                   width: "40vh",
                   textAlign: "right",
                   outline: "none",
-                  fontSize: "5vh",
+                  fontSize: "8vh",
                 }}
                 placeholder="0"
+                value={value}
               />
             </div>
           </div>
           <div
             style={{
-              padding: "5vh 10vh",
-              height: "40vh",
-              width: "30vh",
+              height: "50vh",
+              width: "48vh",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              flexDirection: "column",
             }}
           >
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(4, 1fr)",
-                gridTemplateRows: "repeat(5, 1fr)",
-                columnGap: "28px",
-                rowGap: "20px",
-              }}
-            >
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>C</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>+/-</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>%</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>/</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>1</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>2</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>3</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>X</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>4</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>5</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>6</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>-</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>7</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>8</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>9</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>+</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>00</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>0</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>.</b>
-              </button>
-              <button
-                style={{
-                  textAlign: "center",
-                  padding: "2vh",
-                  boxShadow:
-                    "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
-                  borderRadius: "1vh",
-                  cursor: "pointer",
-                  border: "none",
-                }}
-              >
-                <b>=</b>
-              </button>
+            <div>
+              <input type="button" value="AC" onClick={(e) => setValue("")} />
+              <input
+                type="button"
+                value="DE"
+                onClick={(e) => setValue(value.slice(0, -1))}
+              />
+              <input
+                type="button"
+                value="."
+                onClick={(e) => setValue(value + e.target.value)}
+              />
+              <input
+                type="button"
+                value="/"
+                onClick={(e) => setValue(value + e.target.value)}
+              />
+            </div>
+            <div>
+              <input
+                type="button"
+                value="7"
+                onClick={(e) => setValue(value + e.target.value)}
+              />
+              <input
+                type="button"
+                value="8"
+                onClick={(e) => setValue(value + e.target.value)}
+              />
+              <input
+                type="button"
+                value="9"
+                onClick={(e) => setValue(value + e.target.value)}
+              />
+              <input
+                type="button"
+                value="*"
+                onClick={(e) => setValue(value + e.target.value)}
+              />
+            </div>
+            <div>
+              <input
+                type="button"
+                value="4"
+                onClick={(e) => setValue(value + e.target.value)}
+              />
+              <input
+                type="button"
+                value="5"
+                onClick={(e) => setValue(value + e.target.value)}
+              />
+              <input
+                type="button"
+                value="6"
+                onClick={(e) => setValue(value + e.target.value)}
+              />
+              <input
+                type="button"
+                value="+"
+                onClick={(e) => setValue(value + e.target.value)}
+              />
+            </div>
+            <div>
+              <input
+                type="button"
+                value="1"
+                onClick={(e) => setValue(value + e.target.value)}
+              />
+              <input
+                type="button"
+                value="2"
+                onClick={(e) => setValue(value + e.target.value)}
+              />
+              <input
+                type="button"
+                value="3"
+                onClick={(e) => setValue(value + e.target.value)}
+              />
+              <input
+                type="button"
+                value="-"
+                onClick={(e) => setValue(value + e.target.value)}
+              />
+            </div>
+            <div>
+              <input
+                type="button"
+                value="00"
+                onClick={(e) => setValue(value + e.target.value)}
+              />
+              <input
+                type="button"
+                value="0"
+                onClick={(e) => setValue(value + e.target.value)}
+              />
+              <input
+                type="button"
+                value="="
+                className="equal"
+                onClick={(e) => setValue(eval(value))}
+              />
             </div>
           </div>
         </div>
