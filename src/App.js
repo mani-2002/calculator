@@ -41,14 +41,24 @@ const App = () => {
               borderBottom: "1px solid black",
               backgroundColor: "black",
               color: "white",
-              alignItems: "center",
-              justifyContent: "center",
               display: "flex",
-              padding: "5vh 10vh",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "flex-end",
+              padding: "20px",
               borderRadius: "20px 20px 0 0",
+              margin: "auto",
             }}
           >
-            screen
+            <div
+              style={{
+                color: "gray",
+                fontSize: "1.5em",
+              }}
+            >
+              small screen
+            </div>
+            <div style={{ fontSize: "2.5em" }}>output screen</div>
           </div>
           <div
             style={{
